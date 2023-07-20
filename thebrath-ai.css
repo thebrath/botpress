@@ -1,76 +1,239 @@
-.bpw-floating-button {
-    /* Aligns the button to the right side of the container */
-    float: right;
-    /* Sets the fill color of the button icon */
-    fill: rgb(255, 255, 255);
-    /* Changes the cursor to a pointer when hovering over the button */
-    cursor: pointer;
-    /* Removes the outline around the button when clicked */
-    outline: none;
- 
-    /* Centers the icon inside the button element */
-    display: flex;
-    align-items: center;
-    justify-content: center;
- 
-    /* Sets the z-index to ensure the button is on top of other elements */
-    z-index: 1;
-    /* Sets the width and height of the button */
-    width: 52px;
-    height: 52px;
-    /* Changes the cursor to a pointer when hovering over the button */
-    cursor: pointer;
-    /* Rounds the corners of the button */
-    border-radius: 50%;
-    /* Adds a shadow effect to the button */
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
-    /* Clips any content that overflows the button */
+html {
+  font-size: 16px;
+}
+
+p, .bpw-from-bot > div, #input-message {
+direction: ltr;
+}
+
+
+  .generated {
+    color: #ffffff;
+  }
+
+  #input-message {
+    color: #000000;
+  }
+
+  .bpw-new-messages-indicator{
+    background-color: #092145;
+    color: #000000;
+  }
+  
+  .bpw-header-container {
+    margin: 10px 10px 0px 10px;
+    background: #0BFFFE20;
+    border-radius: 10px;
+    position: relative;
     overflow: hidden;
- 
-    /* Removes padding and borders from the button */
-    padding: 0;
+}
+
+.bpw-typing-bubble{
+  background: #ffffff;
+}
+
+  .bpw-chat-bubble-content {
+    background-color: #092145;
+    border-radius: 3px;
+    border: 1px transparent;
+  }
+  .bpw-header-container {
+    border: 1px;
+    border-radius: 10px;
+  }
+  .bpw-date-container,
+  .bpw-header-name,
+  .bpw-header-subtitle {
+    color: #000000;
+  }
+  
+  .bpw-layout {
+    width: 360px !important;
+    border: 1px;
+    height: 80vh;
+    border-radius: 10px;
+    right: 10%;
+    bottom: 5%;
+  }
+
+  @media screen and (max-device-width: 767px) {
+    .bpw-layout {
+        width: 100% !important;
+        height: 100%;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
+
+  .bpw-header-icon,
+  .bpw-header-icon svg,
+  .bpw-header-icon svg path {
+    fill: #000000 !important;
+  }
+  .bpw-header-container {
+    color: #0BFFFE;
+  }
+
+  #input-message::placeholder {
+    color: #000000; 
+  }
+
+  .bpw-keyboard-single-choice{
+    background-color: #ffffff;
     border: none;
-    background-clip: padding-box;
- 
-    /* Adds a transition effect to the button when its size changes */
-    transition: width 1s, height 1s;
+  }
+  .bpw-button, .bpw-button-alt{
+    background-color: #030b18;
+    color: #ffffff;
+  }
+  .bpw-button {
+    border-radius: 10px;
+    border:none;
+  }
+  .bpw-button:hover, .bpw-button-alt:hover{
+    background-color: #092145;
+    color: #ffffff;
+  }
+
+  a{
+    color: #000000;
+    text-decoration: underline;
+  }
+
+
+
+  .bpw-chat-container {
+    background-color: #ffffff;
+  }
+
+  .bpw-from-bot .bpw-chat-bubble .bpw-chat-bubble-content {
+    background-color: #092145;
+    color: #ffffff;
+  }
+
+  .bpw-from-user .bpw-chat-bubble .bpw-chat-bubble-content {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .bpw-composer {
+    background-color: #ffffff;
+    border-top: 1px solid #092145;
+  }
+
+  .bpw-chat-container::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ffffff;
+  }
+
+  .bpw-chat-container::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+  }
+
+  .bpw-bot-avatar img,
+  .bpw-bot-avatar svg {
+    background: #000000;
+    background-size: cover;
+    border: 3px solid #000000;
+  }
+
+  ::-webkit-scrollbar{
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-track{
+    background-color:transparent;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background-color:#ffffff;
+    border-radius:1rem;
+    border: 0.5rem solid transparent;
+
+  }
+
+  .bpw-floating-button i svg path {
+    fill: #ffffff;
 }
+
 .bpw-floating-button {
-    background-image: url(https://www.thebrath.ai/wp-content/uploads/go-x/u/f4ceb7c1-5743-4984-9564-a6ebc8322c30/l537,t537,w926,h926/image-320x320.png);
+    background: black;
+    border-radius: 52px;
 }
-.bpw-floating-button i {
-    /* Adds a transition effect to the icon when its opacity changes */
-    transition: opacity 0.3s ease;
-    /* Sets the opacity of the icon to fully visible */
-    opacity: 1;
-    /* Inherit the fill and stroke color from the parent button element */
-    fill: inherit;
-    stroke: inherit;
-    /* Sets the width of the icon to 100% of the parent button element */
-    width: 100%;
-    /* Removes padding and sets line-height to 0 to center the icon */
-    padding: 0;
-    line-height: 0;
-}
-.bpw-floating-button .bpw-floating-button-unread {
-    /* Displays the notification badge */
-    display: block;
-    /* Positions the badge to the top right of the button */
-    position: absolute;
-    right: 2px;
-    bottom: 54px;
-    /* Sets the width and height of the badge */
-    width: 20px;
-    height: 20px;
-    /* Rounds the corners of the badge to make it circular */
-    border-radius: 50%;
-    /* Centers the text inside the badge */
-    line-height: 20px;
- 
-    /* Sets the color of the text inside the badge */
-    color: #fff;
-    /* Sets the background color of the badge */
-    background-color: #ff5d5d;
-    /* Adds a shadow effect to the badge */
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
-}
+
+
+  .bpw-chat-container {
+    scrollbar-width: thin;
+    scrollbar-color: #092145 #ffffff;
+    border: none;
+  }
+
+  .bpw-chat-container::-moz-scrollbar {
+    width: 10px;
+    border:none;
+  }
+
+  .bpw-chat-container::-moz-scrollbar-track {
+    background-color:transparent;
+    border:none;
+  }
+
+  .bpw-chat-container::-moz-scrollbar-thumb {
+    background-color:#ffffff;
+    border:none;
+  }
+
+  .bpw-powered {
+    text-align: center;
+    padding: 10px;
+    color: #000000;
+    background:  #ffffff;
+    font-size: 16px;
+    border-top: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .bpw-powered a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .bpw-powered a:hover {
+    text-decoration: underline;
+  }
+
+  .bpw-send-button:disabled,
+  .bpw-send-button:disabled:hover {
+    opacity: 0.4;
+    background-color: var(--theme-primary);
+    cursor: default;
+  }
+
+  .bpw-send-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .bpw-send-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--spacing-medium);
+    background-color: var(--theme-primary);
+    padding: 20px;
+    width: 24px;
+    height: 24px;
+    color: transparent;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2217%22%20height%3D%2220%22%20viewBox%3D%220%200%2017%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.77152%201.04207L15.5347%209.13807C16.192%209.52472%2016.192%2010.4753%2015.5347%2010.8619L8.5%2015L1.70485%2018.9971C0.998111%2019.4129%200.118918%2018.8481%200.203121%2018.0325L0.811331%2012.1412C0.85993%2011.6705%201.23186%2011.2983%201.70256%2011.2493L8.21533%2010.5717C9.32302%2010.4565%209.44138%208.88961%208.36357%208.60928L1.54478%206.83574C1.15164%206.73349%200.859426%206.40357%200.805392%206.00096L0.27339%202.03702C0.162447%201.21039%201.05263%200.619195%201.77152%201.04207Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    transition: background-color 0.2s;
+  }
+
+  .bpw-send-button:not(:disabled):hover {
+    background-color: var(--theme-primary-hover);
+  }
