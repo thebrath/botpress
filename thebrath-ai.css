@@ -36,7 +36,7 @@
     transition: width 1s, height 1s;
 }
 .bpw-floating-button {
-    background-image: url(YOUR_URL);
+    background-image: url(https://www.thebrath.ai/wp-content/uploads/go-x/u/f4ceb7c1-5743-4984-9564-a6ebc8322c30/l537,t537,w926,h926/image-320x320.png);
 }
 .bpw-floating-button i {
     /* Adds a transition effect to the icon when its opacity changes */
